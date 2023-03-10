@@ -28,13 +28,16 @@ export const ModalContent = styled.div`
   }
 `;
 export const IconButton = styled(NewButton)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
   width: 40px;
-  height: 40px;
+  height: 30px;
   border-radius: 4px;
-  background-color: transparent;
+  background-color: #fff;
   svg {
     width: 40px;
     height: 40px;
