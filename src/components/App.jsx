@@ -24,11 +24,12 @@ export const App =()=> {
         if (!searchName) {
             return;
         }
-        setStatus('pending')
+        
         fetchApi(searchName, page)
             .then(res => res)
             .then(({data}) => {
-                if (data.totalHits !== 0 && page === 1) {
+              if (data.totalHits !== 0 && page === 1) {
+                    setStatus('pending')
                     setPage(1)
                     setSearchPicture(data.total)
                     setValueArr(data.hits);
